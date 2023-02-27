@@ -1,0 +1,353 @@
+ function multiply(a, b){
+ return a * b
+}
+
+
+function getPlanetName(id){
+  var name;
+  switch(id){
+    case 1:
+      name = 'Mercury'
+      break;
+    case 2:
+      name = 'Venus'
+      break;
+    case 3:
+      name = 'Earth'
+      break;
+    case 4:
+      name = 'Mars'
+      break;
+    case 5:
+      name = 'Jupiter'
+      break;
+    case 6:
+      name = 'Saturn'
+      break;
+    case 7:
+      name = 'Uranus'
+      break;
+    case 8:
+      name = 'Neptune'
+      break;
+  }
+  
+  return name;
+}
+
+
+function solution(str){
+  return str.split("").reverse().join(""); 
+}
+
+
+function evenOrOdd(number) {
+   if (number % 2 === 0) {
+     return 'Even';
+   } else {
+     return 'Odd';
+   }
+}
+
+
+
+function getCount(str) {
+  let vowelsCount = 0;
+  const arr = str.split("");
+  
+  for (let i = 0; i < arr.length; i++){
+    switch(arr[i]){
+         case 'a':
+         vowelsCount++;
+        break;
+           case 'e':
+         vowelsCount++;
+        break;
+           case 'i':
+         vowelsCount++;
+        break;
+           case 'o':
+         vowelsCount++;
+        break;
+           case 'u':
+         vowelsCount++;
+        break;        
+    }   
+  }
+  return vowelsCount;
+}
+
+
+function greet(name){
+
+  if(name === "Johnny"){
+    return "Hello, my love!";
+  }
+  return "Hello, " + name + "!";
+
+}
+
+
+function isDivisible(n, x, y){
+  
+  const result1 = n / x;
+  const result2 = n / y;
+  
+  if(result1 % 1==0 && result2 % 1 ===0) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+
+function makeNegative(num) {
+  if (num <0) {
+    return num;
+  } else {
+    return num * -1;
+  }
+}
+
+
+class SmallestIntegerFinder {
+  findSmallestInt(arrayOfNumbers) {
+    
+    let smallestNumber;
+    
+    for (let i = 0; i < arrayOfNumbers.length; i++){
+      
+      const arrNumber = arrayOfNumbers[i];
+      
+      if (i === 0) {
+        smallestNumber = arrNumber;
+      }
+      
+      if (arrNumber < smallestNumber) {
+        smallestNumber = arrNumber;
+      
+      }
+      
+    }
+    return smallestNumber;
+  }
+}
+
+
+
+var summation = function (num) {
+  
+ let sum = 0;
+  
+  for (let i = 1; i <= num; i++){
+    sum = sum + i;
+  }
+  
+  return sum;
+}
+
+
+
+function getAverage(scoreArray){
+
+  const count = scoreArray.length;
+  let sum = 0;
+  
+  for(let i = 0; i < count; i++){
+    sum = sum + scoreArray[i];
+  }
+  const avg = sum / count;
+  const roundedDown = Math.floor(avg);
+  
+  return roundedDown;
+}
+
+
+
+
+const rps = (player1, player2) => {
+   if (player1=== 'rock') { 
+      if (player2=== 'rock') {
+        return 'Draw!';
+    }
+
+if (player2 === 'paper') {
+  return 'Player 2 won!';
+  }
+
+if (player2 === 'scissors') { 
+  return 'Player 1 won!';
+   }
+ }
+
+if (player1 === 'paper') {
+ if (player2 === 'rock') {
+   return 'Player 1 won!';
+   }
+
+if (player2 === 'paper') {
+  return  'Draw!';
+}
+   
+   if (player2 === 'scissors') {
+     return 'Player 2 won!';
+   }
+  }
+ 
+  if (player1 === 'scissors') { 
+     if (player2 === 'rock') {
+        return 'Player 2 won!';
+       }
+    
+    if (player2 === 'paper') {
+      return 'Player 1 won!';
+   }
+    
+    if (player2 === 'scissors') { 
+      return 'Draw!';
+      }
+   }
+  };
+
+
+
+function removeChar(str){
+ 
+  const lengthOfString = str.length;
+  
+  return str.substr(1, lengthOfString - 2);
+
+};
+
+
+
+function positiveSum(arr) {
+
+  let sum = 0;
+  
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > 0){
+      sum = sum + arr[i];
+    }
+  }
+  return sum;
+}
+
+
+
+
+function basicOp(operation, value1, value2){
+  
+  let result;
+  
+  switch (operation){
+      case '+':
+        result = value1 + value2;
+        break;
+      case '-':
+        result = value1 - value2;
+        break;
+      case '*':
+        result = value1 * value2;
+        break;
+      case '/':
+        result = value1 / value2;
+        break;
+      
+  }
+  return result;
+}
+
+
+
+function repeatStr (n, s) {
+  
+  let startString='';
+  
+  for (let i=0; i<n; i++) {
+    startString= startString + s;
+  }
+  return startString;
+}
+
+
+
+function stringToArray(string){
+
+  return string.split(" ");
+
+}
+
+
+
+function noSpace(str){
+  const arr=str.split(" ");
+  
+  let newArray= [];
+  
+  for (let i=0; i<arr.length; i++) {
+    const trimedString = arr[i].trim();
+    newArray.push(trimedString);
+  }
+  const finalString= newArray.join("");
+  return finalString;
+}
+
+
+
+function maps(arr){
+  
+  const result = arr.map((arrItem) => {
+    return arrItem * 2;
+  });
+  
+  return result;
+}
+
+
+
+
+function hero(bullets, dragons) {
+  return bullets >= dragons * 2;
+}
+hero(0, 1);  // false
+hero(4, 2);  // true
+
+
+
+function arrayPlusArray(arr1, arr2) {
+ 
+  let sum = 0;
+  
+  for (let i = 0; i < arr1.length; i++){
+    const arr1Value = arr1[i];
+    const arr2Value = arr2[i];
+    
+    const addedValue = arr1Value + arr2Value;
+    
+    sum = sum + addedValue;
+  }
+  return sum;
+}
+
+
+
+function century(year) {
+  return Math.ceil(year / 100);
+}
+
+
+
+
+var humanYearsCatYearsDogYears = function(humanYears) {
+  if (humanYears <= 2)
+    return [humanYears, 6 + 9 * humanYears, 6 + 9 * humanYears]
+  else
+    return [humanYears, 16 + 4 * humanYears, 14 + 5 * humanYears]
+}
+
+
+
+const points=games=>games.reduce((output,current)=>{
+    
+return output += current[0]>current[2] ? 3 : current[0] === current[2] ? 1 : 0;  },0)
